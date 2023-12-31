@@ -1,0 +1,106 @@
+.overlay{
+  position: absolute;/*Sits on top of page conten*/
+  width: 100%; /*Full width (covers the whole page)*/
+  height: 100%; /*Full height (covers the whole page)*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /*Black background with opacity*/
+  z-index: 5; /*Specify a stack order in case you are using a different order for other elements*/
+  cursor: pointer; /*Add a pointer on hover*/
+}
+.product-details-info{
+  position: absolute;
+  width: 480px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 10;
+  transition: 1s;
+  padding: 10px 25px;
+}
+.product-details-close{
+  text-align: right;
+  color: #28282B;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 5px 0px;
+}
+.product-details-image{
+  width: 100%;
+  height: 320px;
+}
+.product-details{
+  padding: 10px 0px;
+}
+.product-details-gbc{
+  margin: 20px 0px;
+}
+.product-details-gbc > span{
+  margin-left: 0px;
+  background-color: #36454F;
+  font-size: 14px;
+  color: white;
+  padding: 5px 20px;
+}
+.product-details-name{
+  margin: 20px auto;
+}
+.product-details-price{
+  margin: 30px 0px;
+  background-color: #FCF55F;
+  font-size: 14px;
+  border: FFC000 2px solid;
+  border-radius: 5px;
+  padding: 25px 10px;
+}
+.product-details-size{
+  margin: 30px 0px;
+}
+span{
+  padding: 5px 10px;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+.product-details-available-size{
+  margin: 0px 0px;
+  background-color: #28282B;
+  color: white;
+  font-size: 16px;
+  border-radius: 0px;
+  padding: 10px 15px;
+}
+.product-details-available-color{
+  border-radius: 50%;
+  padding: 8px 18px;
+}
+.product-details-desc{
+  margin-top: 30px;
+  font-size: 14px;
+}
+.product-details-addtoCart{
+  margin: 20px 0px;
+}
+.btn-add-to-cart{
+  border: none;
+  background-color: #28282B;
+  padding: 10px 30px;
+  font-size: 20px;
+  color: #fff;
+}
+.scroll{
+  overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar{
+  width: 5px;
+}
+.scroll::-webkit-scrollbar-track{
+  -webkit-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.scroll::-webkit-scrollbar-thumb{
+  -webkit-box-shadow:inset 0 0 6px #28282B;
+  border-radius: 5px;
+}

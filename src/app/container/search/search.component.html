@@ -1,0 +1,13 @@
+<div class="search-product">
+  <!--two way data binding-->
+  <!--1. <input type="text" name="" class="search-input" [value]="searchText" (input)="updateSearchText($event)">-->
+  <!--2. <input type="text" name="" class="search-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()">-->
+  <input type="text" name="" class="search-input" #searchInput>
+
+  <!--1. <button class="btn btn-search">Search</button>-->
+  <!--2. <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" [disabled]="!searchText">Search</button>-->
+  <button class="btn btn-search" (click)="setSearchText()">Search</button>
+</div>
+<div class="search-result">
+  <p *ngIf="searchText != ''"><strong>Search result for:</strong> {{searchText}} </p>
+</div>

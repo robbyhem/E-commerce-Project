@@ -1,0 +1,51 @@
+<div class="product-container">
+  <!--property binding-->
+  <!--<img [src]=product.pImage alt="iPhone 14 image" [width]="200" [height]=300>-->
+
+  <!--string interpolation-->
+  <!--<p>Name: {{product.name}}</p>
+  <p>Price: ${{product.price}}</p>
+  <p>Colour: {{product.colour}}</p>
+  <p>Discount Price: {{"$" + getDiscountPrice().toFixed(2)}}</p>
+  <p>{{product.inStock > 0 ? "Only " + product.inStock + " items left" : "Not in stock"}}</p>
+  <button (click)="decreamentValue()">-</button>
+  <span>{{addToCart}}</span>
+  <button (click)="increamentValue()">+</button>-->
+
+  <!--property binding-->
+  <!--<button [disabled]="!(product.inStock > 0)">Buy Now</button><br>-->
+  <!--we can also perform property binding like this, we also added attribute binding-->
+  <!--<input type="text" bind-value="name" [attr.aria-hidden]=""><br>-->
+
+  <!--event binding-->
+  <!--<input type="text" (input)="onNameChange($event)">
+  <p>Name: {{name}}</p>-->
+
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+  <!--<div *ngFor="let item of [2, 4, 6, 8]">
+    <p>Current Item is: {{item}}</p>
+  </div>
+  <div *ngFor="let item of stringArr">
+    <p>Current Item is: {{item}}</p>
+  </div>-->
+  <product-list [searchText]="searchText" #productListComponent></product-list>
+  <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+  <div class="featured-products">
+    <div class="featured-product-heading">
+      <h1>Latest Arrival in Popular Brands</h1>
+    </div>
+
+    <feature-brands>
+      <h3 class="title">New Arrivals in Nike</h3>
+      <button class="call-to-action">Show New Arrival in Nike</button>
+    </feature-brands>
+    <feature-brands>
+      <h3 class="title">New Arrivals in Adidas</h3>
+      <button class="call-to-action">Show New Arrival in Adidas</button>
+    </feature-brands>
+    <feature-brands>
+      <h3 class="title">New Arrivals in Reebok</h3>
+      <button class="call-to-action">Show New Arrival in Reebok</button>
+    </feature-brands>
+  </div>
+</div>

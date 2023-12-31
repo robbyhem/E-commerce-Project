@@ -1,0 +1,65 @@
+<div class="product-details-info scroll">
+  <div class="product-details-close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="product-details-image">
+    <img [src]="product.imageURL" class="product-details-image" alt="">
+  </div>
+
+  <div class="product-details">
+    <div class="product-detail-name">
+      <h2>{{product.name}}</h2>
+    </div>
+    <div class="product-details-gbc">
+      <span [setBackground]="{backgroundColo: 'red', textColo: 'white'}">{{product.gender}}</span>
+      <span [setBackground]="{backgroundColo: 'black', textColo: 'white'}">{{product.brand}}</span>
+      <span [setBackground]="{backgroundColo: 'blue', textColo: 'white'}">{{product.category}}</span>
+    </div>
+    <div class="product-detail-price">
+      <p>
+        <b>Price Each Pair:</b>
+        <span style="background-color: red; color: white;"><s>$699</s></span>
+        <span style="background-color: green; color: white;">$599</span> (Inclusive of alltaxes)
+      </p>
+    </div>
+    <div class="product-detail-size">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid;">
+        <h4>Available Size</h4>
+      </div>
+      <div style="margin-top: 20px;">
+        <span class="product-detail-available-size">6</span>
+        <span class="product-detail-available-size">7</span>
+        <span class="product-detail-available-size">8</span>
+        <span class="product-detail-available-size">9</span>
+      </div>
+    </div>
+    
+    <div class="product-detail-color">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid;">
+        <h4>Available Color</h4>
+      </div>
+      <div style="margin-top: 20px;">
+        <span class="product-detail-available-color" style="background-color: red;"></span>
+        <span class="product-detail-available-color" style="background-color: green;"></span>
+        <span class="product-detail-available-color" style="background-color: black;"></span>
+        <span class="product-detail-available-color" style="background-color: blue;"></span>
+      </div>
+    </div>
+
+    <div class="product-detail-desc">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid;">
+        <h4>Product Description</h4>
+      </div>
+      <div style="margin-top: 20px;">
+        <p>DESCRIPTION</p>
+      </div>
+    </div>
+  </div>
+  <div class="product-detail-addtoCart">
+    <button class="btn-add-to-cart" *ngIf="product.is_in_inventory else notifyMe">ADD TO CART</button>
+    <ng-template #notifyMe>
+      <button class="btn-add-to-cart">NOTIFY ME</button>
+    </ng-template>
+  </div>
+</div>
+<div class="overlay"></div>
